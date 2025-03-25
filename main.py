@@ -7,11 +7,19 @@ def get_book_text(path_to_book):
 
 from stats import count_words
 from stats import get_character_dict
+from stats import get_sorted_dict
 
 def main():
     book_text = get_book_text(path_to_book)
     word_count = count_words(book_text)
     character_dict = get_character_dict(book_text)
-    print(f"{word_count} words found in the document")
-    print(character_dict)
+    sorted_dict = get_sorted_dict(character_dict)
+
+    print("============ BOOKBOT ============")
+    print("Analyzing book found at books/frankenstein.txt...")
+    print("----------- Word Count ----------")
+    print(f"Found {word_count} total words")
+    print("--------- Character Count -------")
+    print(sorted_dict)
+    print("============= END ===============")
 main()

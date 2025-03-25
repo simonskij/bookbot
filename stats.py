@@ -14,3 +14,6 @@ def get_character_dict(text):
             else:
                 character_dict[letter] = 1
     return character_dict   
+
+def get_sorted_dict(char_dict):
+    return char_dict["num"]
