@@ -15,5 +15,13 @@ def get_character_dict(text):
                 character_dict[letter] = 1
     return character_dict   
 
-def get_sorted_dict(char_dict):
-    return char_dict["num"]
+def get_split_dict(char_dict):
+    char_list = []
+    for char, count in char_dict.items():
+        new_item = {"char": char, "count": count} 
+        char_list.append(new_item)
+    return char_list
+
+
+def sort_count(char_dict):
+    return char_dict["count"]
