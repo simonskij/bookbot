@@ -1,4 +1,10 @@
-path_to_book = "/home/silentspecter/Workspace/github.com/simonskij/bookbot/books/frankenstein.txt"
+import sys
+if len(sys.argv) < 2:
+    print(f"Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
+
+path_to_book = sys.argv[1]
+
 
 def get_book_text(path_to_book):
     with open(path_to_book) as f:
